@@ -1,6 +1,7 @@
 import pytest
 import allure
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
@@ -19,6 +20,8 @@ from conftest import set_up, set_group
 # @pytest.mark.run(order=2)
 @allure.description("Test buy product 1")
 def test_buy_product_1(set_up, set_group):
+    options = Options()
+    options.add_argument("--headless")
     driver = webdriver.Chrome()
     print("START TEST 1")
 
@@ -46,8 +49,9 @@ def test_buy_product_1(set_up, set_group):
 
 @pytest.mark.run(order=3)
 def test_buy_product_2(set_up, set_group):
-    s = Service('D:\\Selenium_Framework\\chromedriver.exe')
-    driver = webdriver.Chrome(service=s)
+    options = Options()
+    options.add_argument("--headless")
+    driver = webdriver.Chrome()
     print("START TEST 2")
 
     login = LoginPage(driver)
@@ -67,8 +71,9 @@ def test_buy_product_2(set_up, set_group):
 #
 @pytest.mark.run(order=1)
 def test_buy_product_3(set_up, set_group):
-    s = Service('D:\\Selenium_Framework\\chromedriver.exe')
-    driver = webdriver.Chrome(service=s)
+    options = Options()
+    options.add_argument("--headless")
+    driver = webdriver.Chrome()
     print("START TEST 3")
 
     login = LoginPage(driver)
