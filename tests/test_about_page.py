@@ -18,7 +18,7 @@ from conftest import set_up
 def test_about_page(set_up):
     options = Options()
     options.add_argument("--headless")
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=options)
     print("START TEST")
 
     login = LoginPage(driver)
