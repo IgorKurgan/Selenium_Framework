@@ -18,6 +18,7 @@ from conftest import set_up
 def test_about_page(set_up):
     options = Options()
     options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(options=options)
     print("START TEST")
 
