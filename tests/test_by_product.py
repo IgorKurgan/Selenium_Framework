@@ -22,7 +22,7 @@ from conftest import set_up, set_group
 def test_buy_product_1(set_up, set_group):
     options = Options()
     options.add_argument("--headless")
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=options)
     print("START TEST 1")
 
     login = LoginPage(driver)
@@ -51,7 +51,7 @@ def test_buy_product_1(set_up, set_group):
 def test_buy_product_2(set_up, set_group):
     options = Options()
     options.add_argument("--headless")
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=options)
     print("START TEST 2")
 
     login = LoginPage(driver)
@@ -73,7 +73,7 @@ def test_buy_product_2(set_up, set_group):
 def test_buy_product_3(set_up, set_group):
     options = Options()
     options.add_argument("--headless")
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=options)
     print("START TEST 3")
 
     login = LoginPage(driver)
