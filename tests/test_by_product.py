@@ -22,6 +22,7 @@ from conftest import set_up, set_group
 def test_buy_product_1(set_up, set_group):
     options = Options()
     options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
     driver = webdriver.Chrome()
     print("START TEST 1")
 
@@ -51,6 +52,7 @@ def test_buy_product_1(set_up, set_group):
 def test_buy_product_2(set_up, set_group):
     options = Options()
     options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
     driver = webdriver.Chrome()
     print("START TEST 2")
 
@@ -73,6 +75,7 @@ def test_buy_product_2(set_up, set_group):
 def test_buy_product_3(set_up, set_group):
     options = Options()
     options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
     driver = webdriver.Chrome()
     print("START TEST 3")
 
